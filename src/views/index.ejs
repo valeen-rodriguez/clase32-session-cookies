@@ -1,0 +1,58 @@
+	<%- include("./partials/head.ejs", { title : 'Session & Cookies' })  %> 
+
+<% if(locals.user) { %>
+	<body style="background-color: <%= user.color %>;">
+		<div class="datos_mensaje">
+			<p class="datos_seleccion">Hola <%= user.nombre %>, elegiste el color: <%= user.color %>, tu email es: <%= user.email %>, y tu edad es: <%= user.edad %></p>
+		</div>
+		<a href="/logout"><button>Olvidar Color</button></a>
+	</body>
+
+<% } else { %>
+	
+	<body>
+		<main>
+			<form action="/" method="post">
+				<div class="form_label_input">
+				
+					<div class="div_nombre">
+						<label for="nombre">Ingrese su nombre:</label>
+						<input type="text" id="nombre" name="nombre" value="<%= locals.old && old.nombre ? old.nombre : '' %>" required>
+						<p><%= locals.errores && errores.nombre ? errores.nombre.msg : '' %> </p>
+					</div>
+
+					<div class="div_email">
+						<label for="email">Ingrese su email:</label>
+						<input type="email" id="email" name="email" value="<%= locals.old && old.email ? old.email : '' %>" required>
+						<p><%= locals.errores && errores.email ? errores.email.msg : '' %> </p>
+					</div>
+
+					<div class="div_seleccion">
+						<label for="color">Seleccione un color:</label>
+						<select id="color" name="color" required>
+							<option value="rojo" <% if (locals.old && old.color === 'rojo') { %> selected <% } %>>Rojo</option>
+							<option value="verde" <% if (locals.old && old.color === 'verde') { %> selected <% } %>>Verde</option>
+							<option value="azul" <% if (locals.old && old.color === 'azul') { %> selected <% } %>>Azul</option>
+						</select>
+						<p><%= locals.errores && errores.color ? errores.color.msg : '' %></p>
+					</div>
+				
+					<div class="div_edad">
+						<label for="edad">Ingrese su edad:</label>
+						<input type="text" id="edad" name="edad" value="<%= locals.old ? old.edad : '' %>" required>
+						<p><%= locals.errores && errores.edad ? errores.edad.msg : '' %></p>
+					</div>
+					
+					<div class="boton_recordar">
+					<input type="checkbox" name="remember" id="remember">
+					<label for="remember">Recordar</label>
+					</div>
+					<button type="submit">Enviar</button>
+				</div>
+			</form>
+		</main>
+	</body>
+<% } %>
+</html>
+
+</html>
