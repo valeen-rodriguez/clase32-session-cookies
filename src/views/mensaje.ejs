@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/mensaje.css">
 </head>
-    <body style="background-color: <%= user.color %>;">
-    <p>Hola <%= user.nombre %>, gracias por visitarnos.</p>
-</body>
+    <body class="background_color <%= user.color %>">
+        <div class="mensaje_usuario">
+    <h1>Hola <%= user.nombre %>, gracias por visitarnos.</h1>
+        </div>
+    <div class="boton_recordar">
+    <a href="/logout"><button>Olvidar Color</button></a>
+    </div>
+    </body>
 </html>

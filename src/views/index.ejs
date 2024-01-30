@@ -1,11 +1,15 @@
 	<%- include("./partials/head.ejs", { title : 'Session & Cookies' })  %> 
 
+	<link rel="stylesheet" href="/css/general.css">
 <% if(locals.user) { %>
-	<body style="background-color: <%= user.color %>;">
+	<body class="background_color <%= user.color %>">
 		<div class="datos_mensaje">
-			<p class="datos_seleccion">Hola <%= user.nombre %>, elegiste el color: <%= user.color %>, tu email es: <%= user.email %>, y tu edad es: <%= user.edad %></p>
+			<h3 class="datos_seleccion">Hola <%= user.nombre %>, elegiste el color: <%= user.color %>, tu email es: <%= user.email %>, y tu edad es: <%= user.edad %></h3>
 		</div>
+		<div class="boton_color_mensaje">
+		<a href="/mensaje"><button>Mensaje</button></a>
 		<a href="/logout"><button>Olvidar Color</button></a>
+		</div>
 	</body>
 
 <% } else { %>

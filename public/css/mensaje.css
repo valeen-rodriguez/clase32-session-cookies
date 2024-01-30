@@ -1,0 +1,52 @@
+.mensaje_usuario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 210px;
+}
+
+h1{
+    background-color: rgba(255, 255, 255, 0.282);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.background_color.rojo{
+    background-color: red;
+}
+
+.background_color.verde{
+    background-color: green;
+}
+
+.background_color.azul{
+    background-color: blue;
+}
+
+.boton_recordar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.boton_recordar input{
+    margin-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #8a8a8aca;
+    color: #fff;
+    border: none;
+    padding: 15px;
+}
+
+button:hover {
+    background-color: #acacaca1;
+}

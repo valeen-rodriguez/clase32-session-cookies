@@ -4,7 +4,14 @@ body {
     font-family: Arial, sans-serif;
     margin-top: 100px;
     padding: 0;
-    background-color: <%= usuario.color %>
+}
+
+h3{
+    background-color: rgba(255, 255, 255, 0.282);
+    border-radius: 10px 10px 10px 10px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
 }
 
 form {
@@ -68,6 +75,7 @@ select {
     margin-bottom: 15px;
     box-sizing: border-box;
 }
+
 button {
     width: 100%;
     padding: 10px;
@@ -76,11 +84,18 @@ button {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #8a8a8aca;
     color: #fff;
     border: none;
     padding: 15px;
     cursor: pointer;
+}
+
+.boton_color_mensaje{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 15px;
 }
 
 .boton_recordar{
@@ -95,6 +110,17 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #acacaca1;
 }
 
+.background_color.rojo{
+    background-color: red;
+}
+
+.background_color.verde{
+    background-color: green;
+}
+
+.background_color.azul{
+    background-color: blue;
+}
